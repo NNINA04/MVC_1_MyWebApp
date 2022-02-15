@@ -1,0 +1,12 @@
+﻿.vs
+Visits/obj
+DataBase/bin
+DataBase/obj
+Interfaces/bin
+Interfaces/obj/Debug
+Interfaces/obj
+MyWebApp/obj
+Visits/bin
+Models/bin
+Models/obj
+MyWebApp/bin
