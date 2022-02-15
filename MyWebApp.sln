@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interfaces", "Interfaces\Interfaces.csproj", "{1C95663E-D759-45C4-BD73-B2F67FA21869}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiteVisits", "Visits\SiteVisits.csproj", "{813FBC88-7893-4190-BA8F-053A4586EBE6}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataBases", "DataBase\DataBases.csproj", "{9357C944-3834-4C93-98A3-863174D15A89}"
 EndProject
 Global
@@ -31,10 +29,6 @@ Global
 		{1C95663E-D759-45C4-BD73-B2F67FA21869}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C95663E-D759-45C4-BD73-B2F67FA21869}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C95663E-D759-45C4-BD73-B2F67FA21869}.Release|Any CPU.Build.0 = Release|Any CPU
-		{813FBC88-7893-4190-BA8F-053A4586EBE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{813FBC88-7893-4190-BA8F-053A4586EBE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{813FBC88-7893-4190-BA8F-053A4586EBE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{813FBC88-7893-4190-BA8F-053A4586EBE6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9357C944-3834-4C93-98A3-863174D15A89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9357C944-3834-4C93-98A3-863174D15A89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9357C944-3834-4C93-98A3-863174D15A89}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -21,7 +21,8 @@ namespace MyWebApp
         {
             string connectionString = _configuration.GetConnectionString("VisitsDB");
 
-            services.AddDbContext<VisitsDBContext>(options=>options.UseNpgsql(connectionString));
+            services.AddDbContext<VisitsDBContext>(options=>options.UseNpgsql(connectionString,
+                x=>x.MigrationsAssembly("DataBases"))); // Выбор проекта, в котором будут файлы миграции++
 
             services.AddMvc(option => option.EnableEndpointRouting = false);
         }
