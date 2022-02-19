@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    <link href="~/css/Default.css" rel="stylesheet" />
+    <link href="~/css/Everything.css" rel="stylesheet" />
+    <link href="~/css/TopBar.css" rel="stylesheet" />
+
+    <!--<meta http-equiv="refresh" content="3">-->
+
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div>
+        @{
+            object inputId = 0;
+
+            <input class="idInput" asp-for="@inputId" min="0" max=@int.MaxValue
+               type="number" placeholder="Check visitor by Id" />
+
+            <a>inputId = @inputId</a>
+
+            <form enctype="multipart/form-data" method="post"
+              asp-controller="Visits" asp-action="DefinitVisit" asp-route-id=@inputId>
+                <input type="submit" value="Submit">
+            </form>
+        }
+    </div>
+
+    <div>
+        @RenderBody()
+    </div>
+
+</body>
+</html>

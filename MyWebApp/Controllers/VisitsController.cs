@@ -3,16 +3,22 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MyWebApp.Controllers
 {
-    public class VisitsController
+    public class VisitsController : Controller
     {
-        public ViewResult All() 
+        public ViewResult Default() 
+        {
+            return View();
+        }
+
+        public ViewResult AllVisits() 
         {
             throw new NotImplementedException();
         }
 
-        public ViewResult At(int id) 
+        public ViewResult DefinitVisit(int id)
         {
-            throw new NotImplementedException();
+            ViewBag.Id = id;
+            return View();
         }
     }
 }
