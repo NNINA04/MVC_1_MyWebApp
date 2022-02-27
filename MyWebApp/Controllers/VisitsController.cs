@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MyWebApp.Controllers
@@ -12,9 +13,11 @@ namespace MyWebApp.Controllers
         }
 
         [HttpGet]
-        public ViewResult DefinitVisit(int? id)
+        public ViewResult DefinitVisit(int id)
         {
-            return View(id ?? default);
+            ViewBag.Id = id;
+
+            return View();
         }
     }
 }

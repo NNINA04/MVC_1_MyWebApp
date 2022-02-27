@@ -1,6 +1,5 @@
 ﻿<!DOCTYPE html>
 
-@model int?
 
 <html>
 <head>
@@ -15,9 +14,8 @@
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    <form asp-controller="Visits" asp-action="DefinitVisit"
-          asp-route-id=@Model method="get">
-        <input asp-for="Value" type="number" class="idInputNumber">
+    <form asp-controller="Visits" asp-action="DefinitVisit" method="get">
+        <input type="number" class="idInputNumber" name="id">
     </form>
 
     <div>
