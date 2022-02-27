@@ -1,5 +1,7 @@
 ﻿<!DOCTYPE html>
 
+@model int?
+
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -13,25 +15,13 @@
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    <div>
-        @{
-            object inputId = 0;
-
-            <input class="idInput" asp-for="@inputId" min="0" max=@int.MaxValue
-               type="number" placeholder="Check visitor by Id" />
-
-            <a>inputId = @inputId</a>
-
-            <form enctype="multipart/form-data" method="post"
-              asp-controller="Visits" asp-action="DefinitVisit" asp-route-id=@inputId>
-                <input type="submit" value="Submit">
-            </form>
-        }
-    </div>
+    <form asp-controller="Visits" asp-action="DefinitVisit"
+          asp-route-id=@Model method="get">
+        <input asp-for="Value" type="number" class="idInputNumber">
+    </form>
 
     <div>
         @RenderBody()
     </div>
-
 </body>
 </html>

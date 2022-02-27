@@ -5,20 +5,16 @@ namespace MyWebApp.Controllers
 {
     public class VisitsController : Controller
     {
-        public ViewResult Default() 
-        {
-            return View();
-        }
-
-        public ViewResult AllVisits() 
+        [HttpGet]
+        public ViewResult AllVisits()
         {
             throw new NotImplementedException();
         }
 
-        public ViewResult DefinitVisit(int id)
+        [HttpGet]
+        public ViewResult DefinitVisit(int? id)
         {
-            ViewBag.Id = id;
-            return View();
+            return View(id ?? default);
         }
     }
 }

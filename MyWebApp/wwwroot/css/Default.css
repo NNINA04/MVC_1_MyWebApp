@@ -6,4 +6,5 @@
     font-family: Consolas;
     font-weight: bold;
     font-size: 35px;
+    user-select: none;
 }

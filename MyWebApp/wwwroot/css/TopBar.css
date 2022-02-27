@@ -4,11 +4,24 @@
     background-color: red;
 }
 
-.idInput {
+.idInputNumber {
     width: 75%;
-    height: 30px;
-    display: flex;
+    height: 40px;
     color: white;
+    display: flex;
     text-align: center;
     margin: auto;
+    user-select: none;
+    border: 2px dashed white;
+}
+
+input::-webkit-outer-spin-button,   
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input::placeholder {
+    font-size: large;
+    line-height: 3;
 }
