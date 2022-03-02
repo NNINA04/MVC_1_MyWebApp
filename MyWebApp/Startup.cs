@@ -5,7 +5,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Common.BusinessLogic.DataBases;
-using Common.BusinessLogic;
 
 namespace MyWebApp
 {
@@ -23,7 +22,7 @@ namespace MyWebApp
             string connectionString = _configuration.GetConnectionString("VisitsDB");
 
             services.AddDbContext<VisitsDBContext>(options => options.UseNpgsql(connectionString,
-                x => x.MigrationsAssembly("Common"))); // Выбор проекта, в котором будут файлы миграции
+                x => x.MigrationsAssembly("Common")));
 
             //services.AddScoped<ISQLVisitInfoRepository, SQLVisitInfo>();
 

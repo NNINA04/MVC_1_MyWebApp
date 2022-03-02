@@ -14,12 +14,6 @@ namespace UnitTests.BusinessLogic
             Assert.DoesNotThrow(() => new SQLVisitInfo());
         }
 
-        [Test]
-        public void Visitor_IsNotNull()
-        {
-            Assert.NotNull(_sqlVisitInfo.Visitor);
-        }
-
         //[Test] // Тут значение должно браться из базы данных
         //public void UserId_IncrementsOnInstantiation([Range(1, 5)] int expectedId)
         //{
