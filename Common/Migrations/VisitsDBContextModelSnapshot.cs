@@ -19,7 +19,7 @@ namespace Common.Migrations
                 .HasAnnotation("ProductVersion", "5.0.12")
                 .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
-            modelBuilder.Entity("Common.BusinessLogic.SQLVisitInfo", b =>
+            modelBuilder.Entity("Common.BusinessLogic.SQLVisitorInfo", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -46,7 +46,7 @@ namespace Common.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("VisitInfo");
+                    b.ToTable("VisitorInfo");
                 });
 #pragma warning restore 612, 618
         }

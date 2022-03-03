@@ -5,6 +5,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Common.BusinessLogic.DataBases;
+using Common.Interfaces;
+using Common.BusinessLogic;
 
 namespace MyWebApp
 {
@@ -24,7 +26,7 @@ namespace MyWebApp
             services.AddDbContext<VisitsDBContext>(options => options.UseNpgsql(connectionString,
                 x => x.MigrationsAssembly("Common")));
 
-            //services.AddScoped<ISQLVisitInfoRepository, SQLVisitInfo>();
+            services.AddScoped<IVisitorInfoRepository, SQLVisitorInfoRepository>();
 
             services.AddMvc(option => option.EnableEndpointRouting = false);
         }

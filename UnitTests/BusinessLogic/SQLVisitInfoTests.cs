@@ -6,12 +6,12 @@ namespace UnitTests.BusinessLogic
 {
     public class SQLVisitInfoTests
     {
-        static readonly SQLVisitInfo _sqlVisitInfo = new SQLVisitInfo();
+        static readonly SQLVisitorInfo _sqlVisitInfo = new SQLVisitorInfo();
 
         [Test]
         public void Constructor_WithoutParameters_CreatesValidInstance()
         {
-            Assert.DoesNotThrow(() => new SQLVisitInfo());
+            Assert.DoesNotThrow(() => new SQLVisitorInfo());
         }
 
         //[Test] // Тут значение должно браться из базы данных

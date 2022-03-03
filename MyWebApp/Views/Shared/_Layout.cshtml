@@ -14,9 +14,15 @@
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    <form asp-controller="Visits" asp-action="DefinitVisit" method="get">
-        <input type="number" class="idInputNumber" name="id">
-    </form>
+    <div class="center">
+        <a asp-controller="Visits" asp-action="AllVisitors" class="allVisitorsButton">All Visitors</a>
+    </div>
+
+    <div>
+        <form asp-controller="Visits" asp-action="DefinitVisitor" method="get">
+            <input type="number" name="id" placeholder="Type an id" class="idInputNumber">
+        </form>
+    </div>
 
     <div>
         @RenderBody()

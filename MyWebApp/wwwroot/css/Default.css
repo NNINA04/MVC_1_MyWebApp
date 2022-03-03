@@ -8,3 +8,8 @@
     font-size: 35px;
     user-select: none;
 }
+
+.center {
+    display: flex;
+    justify-content: center;
+}

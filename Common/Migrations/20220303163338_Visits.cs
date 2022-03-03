@@ -9,7 +9,7 @@ namespace Common.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "VisitInfo",
+                name: "VisitorInfo",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
@@ -23,14 +23,14 @@ namespace Common.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_VisitInfo", x => x.Id);
+                    table.PrimaryKey("PK_VisitorInfo", x => x.Id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "VisitInfo");
+                name: "VisitorInfo");
         }
     }
 }

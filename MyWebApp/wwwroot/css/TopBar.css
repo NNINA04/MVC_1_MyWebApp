@@ -4,6 +4,13 @@
     background-color: red;
 }
 
+.allVisitorsButton {
+    border-start-start-radius: 10px;
+    border-start-end-radius: 10px;
+    border: 2px dashed white;
+    border-bottom: none;
+}
+
 .idInputNumber {
     width: 75%;
     height: 40px;
@@ -13,9 +20,10 @@
     margin: auto;
     user-select: none;
     border: 2px dashed white;
+    border-radius: 10px;
 }
 
-input::-webkit-outer-spin-button,   
+input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;

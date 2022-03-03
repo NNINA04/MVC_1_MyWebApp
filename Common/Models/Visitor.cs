@@ -2,7 +2,7 @@
 
 namespace Common.Models
 {
-    public class VisitInfo
+    public class Visitor
     {
         public DateTime Date { get; set; }
         public string MACAddress { get; set; }

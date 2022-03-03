@@ -1,5 +1,16 @@
 ﻿* {
     color: snow;
-    font:  800;
+    font: 800;
     background-color: #1E1E1E;
+}
+
+a {
+    color: #F8F8FF;
+    letter-spacing: 10px;
+    text-shadow: 0px 0px 0px black, 0 0 5px white, 0 0 0px black;
+    font-family: Consolas;
+    font-weight: bold;
+    font-size: 35px;
+    user-select: none;
+    text-decoration: none;
 }

@@ -1,23 +1,31 @@
-﻿using System;
-using System.Linq;
+﻿using Common.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MyWebApp.Controllers
 {
     public class VisitsController : Controller
     {
-        [HttpGet]
-        public ViewResult AllVisits()
+        protected readonly IVisitorInfoRepository _visitorInfo;
+
+        public VisitsController(IVisitorInfoRepository visitorInfo)
         {
-            throw new NotImplementedException();
+            _visitorInfo = visitorInfo;
         }
 
         [HttpGet]
-        public ViewResult DefinitVisit(int id)
+        public ViewResult AllVisitors()
         {
-            ViewBag.Id = id;
+            var allVisitors = _visitorInfo.GetAllVisitorInfo();
 
-            return View();
+            return View(allVisitors);
+        }
+
+        [HttpGet]
+        public ViewResult DefinitVisitor(int id)
+        {
+            var visitor = _visitorInfo.GetVisitorInfoById(id);
+
+            return View(visitor);
         }
     }
 }
