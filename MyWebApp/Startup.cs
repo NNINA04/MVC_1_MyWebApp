@@ -23,8 +23,8 @@ namespace MyWebApp
         {
             string connectionString = _configuration.GetConnectionString("VisitsDB");
 
-            services.AddDbContext<VisitsDBContext>(options => options.UseNpgsql(connectionString,
-                x => x.MigrationsAssembly("Common")));
+            services.AddDbContext<VisitsDBContext>(options => 
+                options.UseNpgsql(connectionString, x => x.MigrationsAssembly("Common")));
 
             services.AddScoped<IVisitorInfoRepository, SQLVisitorInfoRepository>();
 
@@ -33,7 +33,7 @@ namespace MyWebApp
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if(env.IsDevelopment())
+            if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }

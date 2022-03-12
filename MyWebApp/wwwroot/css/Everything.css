@@ -13,4 +13,19 @@ a {
     font-size: 35px;
     user-select: none;
     text-decoration: none;
+    padding: 5px;
+    padding-left: 8px;
+}
+
+table {
+    width: 80%;
+    border: 2px solid white;
+    border-end-start-radius: 5px;
+    border-end-end-radius: 5px;
+}
+
+caption {
+    border: 2px solid white;
+    border-start-start-radius: 5px;
+    border-start-end-radius: 5px;
 }

@@ -13,3 +13,11 @@
     display: flex;
     justify-content: center;
 }
+
+.textCenter {
+    text-align: center;
+}
+
+.visitorsTable {
+    border-top: none;
+}

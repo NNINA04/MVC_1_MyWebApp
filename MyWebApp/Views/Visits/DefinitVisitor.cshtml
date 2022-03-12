@@ -1,22 +1,31 @@
-﻿@model Common.BusinessLogic.SQLVisitorInfo
+﻿@model SQLVisitorInfo
 
-<h1>TEST</h1>
 
 @{
     if (Model is null)
     {
-        <h1>Visitor not found</h1>
+        <h1 class="center">Visitor not found</h1>
     }
     else
     {
-        <h1>Visitor</h1>
-        <table>
-            <tr>
-                <th>@Model.Id</th>
-            </tr>
-            <tr>
-                <th>@Model.Date</th>
-            </tr>
-        </table>
+        <div class="center" style="padding: 20px;">
+            <table class="visitorsTable">
+                <caption class="textCenter">Visitors</caption>
+                <tbody>
+                    <tr class="textCenter">
+                        <th>ID</th>
+                        <th>Date</th>
+                        <th>MAC Address</th>
+                        <th>IP</th>
+                    </tr>
+                    <tr class="textCenter">
+                        <td>@Model.Id</td>
+                        <td>@Model.Date</td>
+                        <td>@Model.MACAddress</td>
+                        <td>@Model.IP</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     }
 }

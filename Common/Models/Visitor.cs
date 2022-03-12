@@ -1,14 +1,19 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.Net;
+using System.Net.NetworkInformation;
 
 namespace Common.Models
 {
     public class Visitor
     {
+        [Required]
         public DateTime Date { get; set; }
-        public string MACAddress { get; set; }
-        public string Location { get; set; }
-        public string Browser { get; set; }
-        public string Device { get; set; }
-        public string IP { get; set; }
+
+        [Required]
+        public IPAddress IP { get; set; }
+
+        [Required]
+        public PhysicalAddress MACAddress { get; set; }
     }
 }

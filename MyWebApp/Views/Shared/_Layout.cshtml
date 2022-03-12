@@ -19,8 +19,9 @@
     </div>
 
     <div>
-        <form asp-controller="Visits" asp-action="DefinitVisitor" method="get">
-            <input type="number" name="id" placeholder="Type an id" class="idInputNumber">
+        <form asp-controller="Visits" asp-action="DefinitVisitor" method="get" >
+            <input type="number" name="id" placeholder="Type an id" 
+                min="0" max="@int.MaxValue" class="idInputNumber">
         </form>
     </div>
 
