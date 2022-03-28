@@ -1,31 +1,39 @@
 ﻿@model System.Collections.Generic.IEnumerable<SQLVisitorInfo>
 
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
 @{
-    if (Model is null)
-        throw new Exception("Found some troubles with data base or business logic");
-    else
-    {
-        <div class="center" style="padding: 20px;">
-            <table class="visitorsTable">
-                <caption class="textCenter">Visitors</caption>
-                <tbody>
-                    <tr class="textCenter">
-                        <th>ID</th>
-                        <th>Date</th>
-                        <th>MAC Address</th>
-                        <th>IP</th>
-                    </tr>
-                    @foreach (var visitor in Model)
-                    {
-                        <tr class="textCenter">
-                            <td>@visitor.Id</td>
-                            <td>@visitor.Date</td>
-                            <td>@visitor.MACAddress</td>
-                            <td>@visitor.IP</td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
-        </div>
-    }
+	ViewBag.Title = "All Visitors";
+
+	if (Model is null)
+		throw new Exception("Found some troubles with data base or business logic");
+	else
+	{
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
+			integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
+			crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+		<div class="center" style="padding: 20px;">
+			<table class="visitorsTable">
+				<caption class="textCenter">Visitors</caption>
+				<tbody>
+					<tr class="textCenter">
+						<th>ID</th>
+						<th>Date</th>
+						<th>MAC Address</th>
+						<th>IP</th>
+					</tr>
+					@foreach (var visitor in Model)
+					{
+						<tr class="textCenter">
+							<td>@visitor.Id</td>
+							<td>@visitor.Date</td>
+							<td>@visitor.MACAddress</td>
+							<td>@visitor.IP</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+		</div>
+	}
 }

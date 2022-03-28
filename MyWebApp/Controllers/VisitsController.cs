@@ -1,5 +1,7 @@
-﻿using Common.Interfaces;
+﻿using Common.BusinessLogic.GraphComponents;
+using Common.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using System.Net.NetworkInformation;
 
 namespace MyWebApp.Controllers
 {
@@ -16,6 +18,10 @@ namespace MyWebApp.Controllers
         public ViewResult AllVisitors()
         {
             var allVisitors = _visitorInfo.GetAllVisitorInfo();
+
+            var sortedMACAddressWithDateTime = new SortedDataWithDateTime<PhysicalAddress>(allVisitors);
+
+			ViewBag.GraphDataDict = new DateScalingWithCountOfData<PhysicalAddress>(sortedMACAddressWithDateTime).GraphData;
 
             return View(allVisitors);
         }

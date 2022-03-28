@@ -8,9 +8,6 @@
     <link href="~/css/Default.css" rel="stylesheet" />
     <link href="~/css/Everything.css" rel="stylesheet" />
     <link href="~/css/TopBar.css" rel="stylesheet" />
-
-    <!--<meta http-equiv="refresh" content="3">-->
-
     <title>@ViewBag.Title</title>
 </head>
 <body>
@@ -19,9 +16,9 @@
     </div>
 
     <div>
-        <form asp-controller="Visits" asp-action="DefinitVisitor" method="get" >
-            <input type="number" name="id" placeholder="Type an id" 
-                min="0" max="@int.MaxValue" class="idInputNumber">
+        <form asp-controller="Visits" asp-action="DefinitVisitor" method="get">
+            <input type="number" name="id" placeholder="Type an id"
+                   min="0" max="@int.MaxValue" class="idInputNumber">
         </form>
     </div>
 

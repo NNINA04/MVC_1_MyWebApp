@@ -1,7 +1,6 @@
 ﻿using Common.BusinessLogic.DataBases;
 using Common.Interfaces;
 using Common.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -16,7 +15,7 @@ namespace Common.BusinessLogic
         public SQLVisitorInfoRepository(VisitsDBContext context)
         {
             _context = context;
-            AddNewVisitorToDBBIfNewForToday();
+            AddNewVisitorToDBIfNewForToday();
         }
 
         public IEnumerable<Visitor> GetAllVisitorInfo()
@@ -29,10 +28,10 @@ namespace Common.BusinessLogic
             return _context.VisitorInfo.FirstOrDefault(x => x.Id == Id);
         }
 
-        private void AddNewVisitorToDBBIfNewForToday()
+        private void AddNewVisitorToDBIfNewForToday()
         {
             int newMaxId = 0;
-
+            
             SQLVisitorInfo lastVisitorInfo = _context.VisitorInfo
                 .OrderByDescending(x => x.Id).FirstOrDefault();
 

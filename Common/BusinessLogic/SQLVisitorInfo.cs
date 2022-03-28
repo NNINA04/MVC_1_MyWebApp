@@ -27,14 +27,7 @@ namespace Common.BusinessLogic
         {
             Date = DateTime.Now;
         }
-        private void SetMACAdress()
-        {
-            var networkInterfaces = NetworkInterface.GetAllNetworkInterfaces();
 
-            MACAddress = (from nic in networkInterfaces
-                          where nic.OperationalStatus == OperationalStatus.Up
-                          select nic.GetPhysicalAddress()).FirstOrDefault();
-        }
         private void SetIP()
         {
             var host = Dns.GetHostEntry(Dns.GetHostName());
@@ -42,6 +35,15 @@ namespace Common.BusinessLogic
             IP = (from ip in host.AddressList
                   where ip.AddressFamily == AddressFamily.InterNetwork
                   select ip).First();
+        }
+
+        private void SetMACAdress()
+        {
+            var networkInterfaces = NetworkInterface.GetAllNetworkInterfaces();
+
+            MACAddress = (from nic in networkInterfaces
+                          where nic.OperationalStatus == OperationalStatus.Up
+                          select nic.GetPhysicalAddress()).FirstOrDefault();
         }
     }
 }
