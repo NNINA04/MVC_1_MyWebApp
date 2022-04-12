@@ -19,24 +19,13 @@ namespace Common.BusinessLogic.GraphComponents
 
 		Dictionary<DateTime, int> ScaleDateAndCalculateData(IEnumerable<IDataWithDateTime<TData>> data)
 		{
+			var graphDataArr = data.ToArray();
+
 			var graphData = new Dictionary<DateTime, int>();
 
-			DateTime lastDate = data.First().Date;
-			graphData.Add(lastDate, 0);
-
-			foreach (var item in data)
+			for (int i = 0; i < graphDataArr.Length; i++)
 			{
-				string currentShortDateTime = item.Date.ToShortDateString();
-
-				if (currentShortDateTime != lastDate.ToShortDateString())
-				{
-					do
-					{
-						lastDate = lastDate.AddDays(1);
-						graphData.Add(lastDate, 0);
-					} while (currentShortDateTime != lastDate.ToShortDateString());
-				}
-				graphData[item.Date]++;
+				// ДОПИСАТЬ ЭТОТ МЕТОД
 			}
 
 			return graphData;
